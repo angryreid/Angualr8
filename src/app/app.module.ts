@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
-import { TeacherComponent } from './teacher/teacher.component';
 import { CoursesService } from './courses.service';
+import { TeacherComponent } from './components';
 // import { CoursesComponent } from './courses.component';
 
 @NgModule({

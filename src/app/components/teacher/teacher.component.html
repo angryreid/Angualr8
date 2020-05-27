@@ -1,0 +1,18 @@
+<p>teacher works!</p>
+<ul>
+  <li
+    *ngFor="let teacher of teacherList; let i = index"
+    (click)="handleClick(teacher, i)"
+    [class.activeClass]="selectedIndex === i"
+  >
+    <span>{{ teacher.name }}</span> - <span>{{ teacher.title }}</span> -
+    <span>{{ teacher.age }}</span>
+    <span
+      *ngIf="selectedIndex === i"
+      [ngClass]="{ go: true }"
+      [ngStyle]="{ 'font-weight': 'bold' }"
+    >
+      Go
+    </span>
+  </li>
+</ul>

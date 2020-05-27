@@ -7,6 +7,7 @@
  * @FilePath: /hello-world/src/app/app.component.ts
  */ 
 import { Component } from '@angular/core';
+import { TeacherDesc } from './components';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'hello-world-h';
+  topTeacherList: TeacherDesc[] = [
+    {
+      name: 'Derek',
+      title: 'High Level Teacher',
+      age: 18,
+    },
+    {
+      name: 'Emma',
+      title: 'High Level Teacher',
+      age: 18,
+    },
+    {
+      name: 'Amy',
+      title: 'Mid Level Teacher',
+      age: 18,
+    },
+  ];
+  handleTeacherClick(teacher: TeacherDesc){
+    console.log(teacher);
+  }
 }
