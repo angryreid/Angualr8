@@ -1,22 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
-import { TeacherComponent } from './components';
+import { SharedModule } from './shared/shared.module';
 // import { CoursesComponent } from './courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent,
-    TeacherComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     CoursesService

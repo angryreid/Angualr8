@@ -1,4 +1,4 @@
-<p>teacher works!</p>
+<p #teacherTitle>teacher works!</p>
 <ul>
   <li
     *ngFor="let teacher of teacherList; let i = index"
@@ -16,3 +16,11 @@
     </span>
   </li>
 </ul>
+
+<div>
+  <!-- <input type="text" [value]="inputValue" (input)="inputValue = $event.target.value"> -->
+  <input type="text" [ngModel]="inputValue" (ngModelChange)="inputValue = $event">
+  <!-- <input type="text" [(ngModel)]="inputValue"> -->
+  <span>Hi, {{inputValue}}</span>
+  <p appMyDirective>{{emoji}}</p>
+</div>

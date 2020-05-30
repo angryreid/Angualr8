@@ -6,8 +6,8 @@
  * @Description: In User Settings Edit
  * @FilePath: /hello-world/src/app/app.component.ts
  */ 
-import { Component } from '@angular/core';
-import { TeacherDesc } from './components';
+import { Component, ViewChild } from '@angular/core';
+import { TeacherDesc, TeacherComponent } from './shared/components';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +32,7 @@ export class AppComponent {
       age: 18,
     },
   ];
+  @ViewChild(TeacherComponent) teacherComp: TeacherComponent;
   handleTeacherClick(teacher: TeacherDesc){
     console.log(teacher);
   }
