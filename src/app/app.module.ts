@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesService } from './courses.service';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home';
 // import { CoursesComponent } from './courses.component';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HomeModule
   ],
   providers: [
     CoursesService

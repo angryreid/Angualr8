@@ -92,7 +92,7 @@ export class TeacherComponent
     console.log('before destroy');
   }
 
-  @Confirmable('Do you want to go?')
+  // @Confirmable('Do you want to go?')
   handleClick(teacher: TeacherDesc, index: number) {
     this.selectedIndex = index;
     console.log(this);
