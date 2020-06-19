@@ -25,8 +25,15 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     private injector: Injector,
     private appRef: ApplicationRef
   ) {
-    this.component = this.componentFactoryResolver.resolveComponentFactory(AComponent).create(this.injector);
+    this.component = this.componentFactoryResolver
+      .resolveComponentFactory(AComponent)
+      .create(this.injector);
     this.appRef.attachView(this.component.hostView);
+    // third change.
+    (<AComponent>this.component.instance).onTitleChange.subscribe(()=>{
+      console.log('title changed!')
+    });
+    (<AComponent>this.component.instance).title = 'a works again!(from App)'
   }
   ngOnDestroy(): void {
     this.appRef.detachView(this.component.hostView);

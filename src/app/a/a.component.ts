@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-a',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./a.component.css']
 })
 export class AComponent implements OnInit {
-  title = "a works!"
+  @Input() title = "a works!"
+  @Output() onTitleChange = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onTitleClick(){
+    this.onTitleChange.emit();
   }
 
 }
