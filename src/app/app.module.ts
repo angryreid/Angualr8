@@ -1,26 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms"
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses.component';
-import { TeacherComponent } from './teacher/teacher.component';
-import { CoursesService } from './courses.service';
-// import { CoursesComponent } from './courses.component';
+import { AComponent } from './a/a.component';
+import { DlHostDirective } from './dl-host.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CoursesComponent,
-    TeacherComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    CoursesService
-  ],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      AComponent,
+      DlHostDirective
+   ],
+   imports: [
+      BrowserModule,
+      FormsModule,
+   ],
+   entryComponents:[AComponent],
+   providers: [
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
