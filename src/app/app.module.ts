@@ -3,23 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses.component';
-import { TeacherComponent } from './teacher/teacher.component';
-import { CoursesService } from './courses.service';
-// import { CoursesComponent } from './courses.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent,
-    TeacherComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
-    CoursesService
   ],
   bootstrap: [AppComponent]
 })
